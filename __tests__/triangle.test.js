@@ -8,4 +8,8 @@ describe("Triangle", () => {
     expect(triangle.side2).toEqual(4);
     expect(triangle.side3).toEqual(5);
   })
+  test("should correctly determine whether three lengths make an equilateral triangle", () => {
+    const triangle = new Triangle(2, 2, 2);
+    expect(triangle.checkType()).toEqual("Equilateral Triangle!");
+  })
 })
