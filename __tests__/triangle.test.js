@@ -2,6 +2,12 @@ import Triangle from "./../src/triangle.js";
 import { TestScheduler } from "jest";
 
 describe("Triangle", () => {
+
+  // let reusableTriangle;
+  // beforeEach(() => {
+  //   reusableTriangle = new Triangle(2, 4, 5);
+  // });
+
   test("should correctly create a triangle object with three lengths", () => {
     const triangle = new Triangle(2,4,5);
     expect(triangle.side1).toEqual(2);
@@ -20,8 +26,8 @@ describe("Triangle", () => {
     const triangle = new Triangle (2, 4, 100);
     expect(triangle.checkType()).toEqual("Not a Triangle!");
   })
-    test("should correctly determine whether three lengths is a scalene triangle", () => {
-    const triangle = new Triangle (5, 4, 3);
+  test("should correctly determine whether three lengths is a scalene triangle", () => {
+    const triangle = new Triangle (2, 4, 5);
     expect(triangle.checkType()).toEqual("Scalene Triangle!");
   })
 })
