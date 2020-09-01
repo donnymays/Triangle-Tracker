@@ -12,7 +12,7 @@ Triangle.prototype.checkType = function () {
   } else if ((this.side1 + this.side2) <= this.side3 || (this.side1 + this.side3) <= this.side2 || (this.side2 + this.side3) <= this.side1) {
     return ("Not a Triangle!"); 
   } else {
-    return "I don't know!";
+    return ("Scalene Triangle!");
   };
 };
 

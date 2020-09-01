@@ -20,4 +20,8 @@ describe("Triangle", () => {
     const triangle = new Triangle (2, 4, 100);
     expect(triangle.checkType()).toEqual("Not a Triangle!");
   })
+    test("should correctly determine whether three lengths is a scalene triangle", () => {
+    const triangle = new Triangle (5, 4, 3);
+    expect(triangle.checkType()).toEqual("Scalene Triangle!");
+  })
 })
