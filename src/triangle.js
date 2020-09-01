@@ -7,7 +7,13 @@ export default function Triangle(side1, side2, side3) {
 Triangle.prototype.checkType = function () {
   if((this.side1 === this.side2) && (this.side2 === this.side3) && (this.side1 === this.side3)) {
     return ("Equilateral Triangle!");
-  }; 
+  } else if ((this.side1 === this.side2) || (this.side1 === this.side3) || (this.side2 === this.side3)) {
+    return ("Isosceles Triangle!");  
+  } else if ((this.side1 + this.side2) <= this.side3 || (this.side1 + this.side3) <= this.side2 || (this.side2 + this.side3) <= this.side1) {
+    return ("Not a Triangle!"); 
+  } else {
+    return "I don't know!";
+  };
 };
 
 // if(side1 === side2 && side2 === side3 && side1 === side3) {

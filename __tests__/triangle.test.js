@@ -12,4 +12,12 @@ describe("Triangle", () => {
     const triangle = new Triangle(2, 2, 2);
     expect(triangle.checkType()).toEqual("Equilateral Triangle!");
   })
+  test("should correctly determine whether threee lengths make an isosceles triangle", () => {
+    const triangle = new Triangle(2, 2, 4);
+    expect(triangle.checkType()).toEqual("Isosceles Triangle!");
+  })
+  test('should correctly determine whether three lengths is not a triangle', () => {
+    const triangle = new Triangle (2, 4, 100);
+    expect(triangle.checkType()).toEqual("Not a Triangle!");
+  })
 })
